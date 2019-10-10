@@ -13,11 +13,8 @@ export class App extends React.Component {
     }
 
     searchYelp(term, location, sortBy) {
-        console.log("Searching");
         Yelp.search(term, location, sortBy).then(
             businesses => {
-                console.log("received results");
-                console.log(this.state.businesses);
                 this.setState({businesses: businesses})
             }
         );

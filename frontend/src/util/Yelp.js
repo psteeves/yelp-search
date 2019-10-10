@@ -1,11 +1,9 @@
 const apiKey = "vqst4lZLC7kPyotHSQhiZD53zuth7qDKyLLcs0oUOZqMQZBlKAHc8PIUlbH2qLPJxDc22HH4w_FyS5EkHwEiKi6V6xEa6kstkvBL3N0cKpfX23tCAxTXC__kmPmdXXYx";
-const endpoint = "https://api.yelp.com/v3/businesses/search?limit=12&";
-const CORSAnywhereUrl = "https://cors-anywhere.herokuapp.com/";
 
 export const Yelp = {
     search(term, location, sortBy) {
-        const url = CORSAnywhereUrl + endpoint + `term=${term}&location=${location}&sort_by=${sortBy}`;
-        console.log("hitting "+url);
+        const url = "http://127.0.0.1:5000/search_yelp?" + `term=${term}&location=${location}&sort_by=${sortBy}`;
+        console.log("Searching for restaurants at "+url);
         const headers = {Authorization: `Bearer ${apiKey}`};
         return fetch(url, {headers: headers}).then(
             response => response.json()

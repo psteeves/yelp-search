@@ -1,4 +1,4 @@
-const apiKey = "vqst4lZLC7kPyotHSQhiZD53zuth7qDKyLLcs0oUOZqMQZBlKAHc8PIUlbH2qLPJxDc22HH4w_FyS5EkHwEiKi6V6xEa6kstkvBL3N0cKpfX23tCAxTXC__kmPmdXXYx";
+const apiKey = <Your api key>;
 const endpoint = "https://api.yelp.com/v3/businesses/search?limit=12&";
 const CORSAnywhereUrl = "https://cors-anywhere.herokuapp.com/";
 
